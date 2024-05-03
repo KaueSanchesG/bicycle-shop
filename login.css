@@ -9,6 +9,7 @@
   height: 100dvh;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
 }
 
 .outter-wrapper {
@@ -23,9 +24,10 @@
   width: fit-content;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 40px;
   border: 1px solid black;
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .container-content {

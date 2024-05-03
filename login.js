@@ -5,7 +5,7 @@ function doLogin() {
   console.log(username + " - " + password);
 
   if (username == "admin" && password == "admin") {
-    window.location.href = "../index.html";
+    window.location.href = "Home/index.html";
   } else {
     alert("Usuário ou Senha inválidos!! tente admin admin");
   }
