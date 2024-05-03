@@ -6,10 +6,11 @@
     <title>Cadastrar</title>
     <link rel="stylesheet" href="register.css" />
     <link rel="stylesheet" href="../Home/style.css" />
+    <link rel="stylesheet" href="../login.css" />
     <script defer src="register.js"></script>
   </head>
   <body>
-    <div class="main-wrapper">
+    <div class="wrapper-main">
       <div class="header">
         <div class="menu-title-container">
           <h3 class="header-menu-title">
@@ -35,6 +36,65 @@
             <a class="link-anchor" href="#">Gerenciar</a>
           </li>
         </ul>
+      </div>
+      <div class="register-wrapper">
+        <h1>Cadastro de Produtos</h1>
+        <div class="input-wrapper">
+          <form id="cadastroForm">
+            <div class="direction-wrapper">
+              <div class="left-content">
+                <div class="container-content">
+                  <label class="input-label" for="descricao">Descrição:</label>
+                  <input type="text" id="descricao" name="descricao" required />
+                </div>
+                <div class="container-content">
+                  <label class="input-label" for="imagem">Imagem:</label>
+                  <input type="file" id="imagem" name="imagem" />
+                </div>
+                <div class="container-content">
+                  <label class="input-label" for="preco_venda"
+                    >Preço de Venda:</label
+                  >
+                  <input
+                    type="number"
+                    id="preco_venda"
+                    name="preco_venda"
+                    step="0.01"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="right-content">
+                <div class="container-content">
+                  <label for="preco_custo">Preço de Custo:</label>
+                  <input
+                    type="number"
+                    id="preco_custo"
+                    name="preco_custo"
+                    step="0.01"
+                    required
+                  />
+                </div>
+                <div class="container-content">
+                  <label class="input-label" for="fabricante"
+                    >Fabricante:</label
+                  >
+                  <input
+                    type="text"
+                    id="fabricante"
+                    name="fabricante"
+                    required
+                  />
+                </div>
+                <div class="container-content">
+                  <label class="input-label" for="categoria">Categoria:</label>
+                  <input type="text" id="categoria" name="categoria" required />
+                </div>
+              </div>
+            </div>
+            <button class="register-btn" type="submit">Cadastrar</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>

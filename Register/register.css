@@ -1,0 +1,45 @@
+.register-wrapper {
+  /* border: 1px solid blue; */
+  padding: 0 5rem;
+}
+
+#cadastroForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper {
+  margin: 7rem auto;
+}
+
+.input-wrapper .left-content {
+  gap: 5px;
+}
+
+.input-wrapper .right-content {
+  gap: 5px;
+}
+
+.container-content {
+  gap: 5px;
+}
+
+.direction-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-btn {
+  align-self: center;
+  justify-self: center;
+}
