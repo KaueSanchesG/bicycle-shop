@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <script defer src="login.js"></script>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="outter-wrapper">
+        <h2>Entre na sua conta</h2>
+        <div class="input-wrapper">
+          <div class="container-content">
+            <label class="input-label" for="username">Usuário:</label>
+            <input
+              type="text"
+              class="input-area"
+              id="username"
+              name="username"
+            />
+          </div>
+          <div class="container-content">
+            <label class="input-label" for="password">Senha:</label>
+            <input
+              type="password"
+              class="input-area"
+              id="password"
+              name="password"
+            />
+          </div>
+          <button onclick="doLogin()" class="submit-btn">Entrar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
