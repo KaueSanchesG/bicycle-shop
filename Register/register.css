@@ -42,4 +42,7 @@
 .register-btn {
   align-self: center;
   justify-self: center;
+  padding: 7px 15px;
+  border-radius: 5px;
+  margin-top: 1rem;
 }
