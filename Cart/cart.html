@@ -6,7 +6,7 @@
     <title>Carrinho</title>
     <link rel="stylesheet" href="cart.css" />
     <link rel="stylesheet" href="../Home/style.css" />
-    <script src="cart.js"></script>
+    <script defer src="cart.js"></script>
   </head>
   <body>
     <div class="main-wrapper">
@@ -35,6 +35,22 @@
             <a class="link-anchor" href="../Manager/manager.html">Gerenciar</a>
           </li>
         </ul>
+      </div>
+      <div class="cart-wrapper">
+        <h1>Seu Carrinho</h1>
+        <table class="main-table">
+          <div class="table-wrapper">
+            <thead class="align-table">
+              <tr class="table-row">
+                <th class="table-head">Produto</th>
+                <th class="table-head">Descrição</th>
+                <th class="table-head">Valor</th>
+                <th class="table-head">Ação</th>
+              </tr>
+            </thead>
+            <tbody class="align-table" id="cartTableBody"></tbody>
+          </div>
+        </table>
       </div>
     </div>
   </body>
