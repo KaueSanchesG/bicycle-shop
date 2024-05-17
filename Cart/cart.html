@@ -39,18 +39,47 @@
       <div class="cart-wrapper">
         <h1>Seu Carrinho</h1>
         <table class="main-table">
-          <div class="table-wrapper">
-            <thead class="align-table">
-              <tr class="table-row">
-                <th class="table-head">Produto</th>
-                <th class="table-head">Descrição</th>
-                <th class="table-head">Valor</th>
-                <th class="table-head">Ação</th>
-              </tr>
-            </thead>
-            <tbody class="align-table" id="cartTableBody"></tbody>
-          </div>
+          <thead class="align-table">
+            <tr class="table-row">
+              <th class="table-head">Produto</th>
+              <th class="table-head">Descrição</th>
+              <th class="table-head">Valor</th>
+              <th class="table-head">Ação</th>
+            </tr>
+          </thead>
+          <tbody class="align-table" id="cartTableBody"></tbody>
         </table>
+        <div class="pay-container">
+          <button type="button" class="pay-btn">Comprar!</button>
+        </div>
+      </div>
+    </div>
+    <!-- PopUp -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <h2>Finalize a compra!</h2>
+        <form id="finalizar-form">
+          <div class="input-container">
+            <div class="container-content">
+              <label class="input-label" for="vendedor">Vendedor:</label>
+              <input type="text" id="vendedor" class="input" />
+            </div>
+            <div class="container-content">
+              <label class="input-label" for="forma-pagamento"
+                >Forma de Pagamento:</label
+              >
+              <input type="text" id="forma-pagamento" class="input" />
+            </div>
+            <div class="container-content">
+              <label class="input-label" for="descricao">Descrição:</label>
+              <input type="text" id="descricao" class="input" />
+            </div>
+            <button type="submit" class="shop-btn" id="finalizar-btn">
+              Finalizar compra!
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </body>

@@ -40,9 +40,19 @@
 }
 
 .register-btn {
+  font-size: 1rem;
+  background-color: aliceblue;
   align-self: center;
   justify-self: center;
   padding: 7px 15px;
   border-radius: 5px;
   margin-top: 1rem;
+}
+
+.register-btn:hover {
+  background-color: rgba(36, 159, 54, 0.7);
+}
+
+.input {
+  padding: 5px;
 }
