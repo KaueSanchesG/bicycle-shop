@@ -2,7 +2,7 @@ function createTableBody() {
   const produtos = JSON.parse(localStorage.getItem("produtos")) || [];
   const productsHTML = document.getElementById("products");
 
-  productsHTML.innerHTML = ""; // Limpar o conteúdo antes de adicionar os produtos
+  productsHTML.innerHTML = "";
 
   produtos.forEach(function (produto, index) {
     productsHTML.innerHTML += `
@@ -31,10 +31,8 @@ function addToCart(index) {
   if (index >= 0 && index < produtos.length) {
     const produto = produtos[index];
     cart.push(produto);
-    produtos.splice(index, 1);
-    localStorage.setItem("produtos", JSON.stringify(produtos));
     localStorage.setItem("cart", JSON.stringify(cart));
-    location.reload();
+    alert("Produto " + produto.descricao + " adicionado ao carrinho!");
   } else {
     console.error("Índice inválido:", index);
   }

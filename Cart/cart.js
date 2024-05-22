@@ -1,14 +1,12 @@
 function removeFromCart(index) {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const produtos = JSON.parse(localStorage.getItem("produtos")) || [];
 
   if (index >= 0 && index < cart.length) {
-    const removedItem = cart.splice(index, 1)[0];
-    produtos.push(removedItem);
+    alert("Produto " + cart[index].descricao + " removido do carrinho!");
+    console.log(cart);
+    cart.splice(index, 1)[0];
 
     localStorage.setItem("cart", JSON.stringify(cart));
-    localStorage.setItem("produtos", JSON.stringify(produtos));
-
     createCartTable();
   } else {
     console.error("Índice inválido:", index);
