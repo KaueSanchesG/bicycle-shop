@@ -6,9 +6,18 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url("../Assets/Bicicletaria.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+}
+
 .header {
   display: flex;
-  background-color: #d9d9d9;
+  background-color: rgba(217, 217, 217, 0.5);
   padding: 5px 10rem;
   justify-content: space-evenly;
 }
@@ -16,6 +25,7 @@
 .main-wrapper {
   display: flex;
   flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100dvh;
 }
 
@@ -49,25 +59,158 @@
 }
 
 .link-anchor:hover {
-  color: rgb(170, 170, 170);
+  color: rgb(255, 255, 255);
 }
 
 .hello-container {
   display: flex;
-  margin-top: 5rem;
-  margin-left: 5rem;
-  border: 2px solid black;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  border: 2px solid white;
   border-radius: 5px;
-  padding: 2rem 3rem;
+  padding: 1rem 2rem;
   width: fit-content;
 }
 
-.working {
+.hello-content {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.create-order {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 10%;
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  justify-content: center;
+  width: 10rem;
+  height: 3rem;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.create-order:hover {
+  background-color: rgba(36, 159, 54, 0.7);
+}
+
+.order-content {
   display: flex;
   text-align: center;
   justify-content: center;
-  background-color: #d9d9d9;
   flex-grow: 1;
+  overflow-y: scroll;
+  margin-bottom: 2rem;
+}
+
+.order-wrapper {
+  background-color: rgba(217, 217, 217, 0.5);
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.service-order {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  justify-content: center;
+  padding: 1rem 0;
+  border-radius: 5px;
+}
+
+.top-container,
+.bottom-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  gap: 10px;
+}
+
+.check-products {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.container-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-btn {
+  display: flex;
+  width: max-content;
+  padding: 8px;
+  align-items: center;
+  align-self: center;
+}
+
+.service-done {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.service-done:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+#feedback-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+  color: #fff;
+}
+
+#feedback-message.success {
+  background-color: #4caf50;
+}
+
+#feedback-message.error {
+  background-color: #f44336;
 }

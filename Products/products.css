@@ -2,6 +2,10 @@
   flex-grow: 1;
 }
 
+h1 {
+  color: white;
+}
+
 .products-wrapper {
   margin: 0 5rem;
   display: flex;

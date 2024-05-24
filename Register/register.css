@@ -1,6 +1,14 @@
+.wrapper-main {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100dvh;
+}
+
 .register-wrapper {
-  /* border: 1px solid blue; */
   padding: 0 5rem;
+}
+
+h1 {
+  color: white;
 }
 
 #cadastroForm {
@@ -10,6 +18,7 @@
 
 .input-wrapper {
   margin: 7rem auto;
+  background-color: white;
 }
 
 .input-wrapper .left-content {

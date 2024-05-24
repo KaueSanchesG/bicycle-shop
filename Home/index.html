@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bicicletaria</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Register/register.css" />
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -17,7 +18,9 @@
         </div>
         <ul class="header-links">
           <li class="list-item">
-            <a class="link-anchor" href="../Register/register.html">Cadastrar</a>
+            <a class="link-anchor" href="../Register/register.html"
+              >Cadastrar</a
+            >
           </li>
           <li class="list-item">
             <a class="link-anchor" href="../Products/products.html">Produtos</a>
@@ -28,16 +31,52 @@
           <li class="list-item">
             <a class="link-anchor" href="../Storage/storage.html">Estoque</a>
           </li>
-          <li class="list-item">
-            <a class="link-anchor" href="../Manager/">Gerenciar</a>
-          </li>
         </ul>
       </div>
       <div class="hello-container">
-        <h1 class="hello-content">Bem vindo, </br> admin!</h1>
+        <h1 class="hello-content">Bem vindo, admin!</h1>
       </div>
-      <div class="working">
-        <h1>Tela ainda em desenvolvimento!</h1>
+      <button type="button" class="create-order" id="new-service">
+        Criar Serviço
+      </button>
+      <div class="order-content">
+        <div class="order-wrapper" id="generate-orders"></div>
+      </div>
+    </div>
+    <!-- PopUp -->
+    <div id="popup" class="modal">
+      <div class="modal-content">
+        <button class="close-btn">&times;</button>
+        <h2>Novo Serviço!</h2>
+        <div class="input-container">
+          <div class="container-content">
+            <label class="input-label" for="client">Cliente:</label>
+            <input type="text" id="client" class="input" />
+          </div>
+          <div class="container-content">
+            <label class="input-label" for="description">Descrição:</label>
+            <input type="text" id="description" class="input" />
+          </div>
+          <div class="container-content">
+            <label class="input-label" for="products"
+              >Produtos para o serviço:</label
+            >
+            <div class="check-products" id="products"></div>
+          </div>
+          <div class="container-content">
+            <label class="input-label" for="estimated-date"
+              >Data Estimada:</label
+            >
+            <input type="date" id="estimated-date" class="input" />
+          </div>
+          <div class="container-content">
+            <label class="input-label" for="total-value">Valor Total:</label>
+            <input type="text" id="total-value" class="input" />
+          </div>
+          <button type="submit" class="order-btn" id="save-service-btn">
+            Criar Serviço!
+          </button>
+        </div>
       </div>
     </div>
   </body>
