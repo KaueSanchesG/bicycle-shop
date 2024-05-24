@@ -29,14 +29,18 @@ function createCartTable() {
       <tr class="table-row">
         <td class="table-data">
           <div class="center-row">
-            <img class="img-item" src="${item.imagem}" alt="Imagem do produto" />
+            <img class="img-item" src="${
+              item.imagem
+            }" alt="Imagem do produto" />
           </div>
         </td>
         <td class="table-data">${item.descricao}</td>
         <td class="table-data">${item.precoVenda}</td>
         <td class="table-data">
           <div class="center-row">
-            <button class="remove-btn" onclick="removeFromCart(${index})" type="button">- Remover</button>
+            <button class="remove-btn" onclick="removeFromCart(${index})" type="button" ${
+      item.categoria === "servico" ? "disabled" : ""
+    }>- Remover</button>
           </div>
         </td>
       </tr>
