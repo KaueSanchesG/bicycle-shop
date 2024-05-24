@@ -1,3 +1,27 @@
+function serviceDone(index) {
+  const serviceOrders = JSON.parse(localStorage.getItem("services")) || [];
+  const service = serviceOrders[index];
+
+  const cartItem = {
+    categoria: "servico",
+    descricao: "Serviço: " + service.descricao + ", Para: " + service.cliente,
+    fabricante: "Bicicletaria",
+    imagem: "../Assets/ServicoFeito1.jpeg",
+    precoCusto: service.total,
+    precoVenda: service.total,
+  };
+
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  cartItems.push(cartItem);
+  localStorage.setItem("cart", JSON.stringify(cartItems));
+
+  alert("Serviço finalizado, você será redirecionado ao carrinho! (click ok)");
+
+  serviceOrders.splice(index, 1);
+  localStorage.setItem("services", JSON.stringify(serviceOrders));
+
+  window.location.href = "../Cart/cart.html";
+}
 document.addEventListener("DOMContentLoaded", function () {
   const popup = document.getElementById("popup");
   const newService = document.getElementById("new-service");
@@ -40,16 +64,26 @@ document.addEventListener("DOMContentLoaded", function () {
       loadDiv.innerHTML += `
       <div class="service-order">
         <div class="top-container">
-          <h3 class="service-order-number">#${index}</h3>
-          <p class="service-client"><strong>Cliente:</strong> ${order.cliente}</p>
-          <p class="service-description"><strong>Descrição do serviço:</strong> ${order.descricao}</p>
+          <h3 class="service-order-number">#${index + 1}</h3>
+          <p class="service-client"><strong>Cliente:</strong> ${
+            order.cliente
+          }</p>
+          <p class="service-description"><strong>Descrição do serviço:</strong> ${
+            order.descricao
+          }</p>
         </div>
         <div class="bottom-container">
-          <p class="service-products"><strong>Total de produtos para o serviço:</strong>${order.produtos.length}</p>
-          <p class="service-total"><strong>Valor do serviço:</strong> ${order.total}</p>
-          <p class="service-date"><strong>Data Estimada:</strong>${order.dataEstimada}</p>
+          <p class="service-products"><strong>Total de produtos para o serviço:</strong>${
+            order.produtos.length
+          }</p>
+          <p class="service-total"><strong>Valor do serviço:</strong> ${
+            order.total
+          }</p>
+          <p class="service-date"><strong>Data Estimada:</strong>${
+            order.dataEstimada
+          }</p>
         </div>
-        <button class="service-done">Finalizar o serviço</button>
+        <button class="service-done" onClick="serviceDone(${index})">Finalizar o serviço</button>
       </div>
       `;
     });
